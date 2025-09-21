@@ -7,6 +7,7 @@ Backend API for Orbit - my personal calendar management system.
 ## What is this?
 
 FastAPI backend that will:
+
 - Manage calendar events
 - Sync with external calendars (Google, Outlook)
 - Handle booking requests
@@ -26,11 +27,17 @@ FastAPI backend that will:
 git clone https://github.com/srmanda-cs/orbit-backend.git
 cd orbit-backend
 git checkout development
+python setup_env.py
+
+# Get your DATABASE_URL from your Postgres provider and add to .env files
 
 # Install
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
+
+# Run migrations
+alembic upgrade head
 
 # Run
 uvicorn app.main:app --reload
@@ -44,7 +51,9 @@ API docs: [http://localhost:8000/docs](http://localhost:8000/docs)
 - **development** - Active Development
 
 ## Frontend
+
 Serves [orbit-frontend](https://github.com/srmanda-cs/orbit-frontend?tab=readme-ov-file)
 
 ## Author
+
 [@srmanda-cs](https://github.com/srmanda-cs)
