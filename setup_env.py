@@ -3,7 +3,6 @@ Setup script to create .env files from .env.example
 Run this after cloning the repository
 """
 
-import os
 import secrets
 from pathlib import Path
 
